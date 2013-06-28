@@ -1,6 +1,6 @@
 jQuery(function( $ ){
-	
-	// toggle
+
+    // toggle
     $(".toggle_container").hide();
     $("h4.trigger").click(function(){
         $(this).toggleClass("active").next().slideToggle("slow");
@@ -24,23 +24,25 @@ jQuery(function( $ ){
     }
 
     // carousel
-    $('#myCarousel').carousel();	
-	
-	
-	// Scroll to local 
-	$.localScroll.hash({
-		target: '#mainWrap', 
-		duration:1000
-	});
-	
-	$.localScroll({
-		target: '#mainWrap',
-		duration:1000,
-		hash:true,
-	});
-	
-	// Scroll elements
-	$('#top').ScrollTo();
-	
+    $('#myCarousel').carousel({
+        interval: false
+    })
 
-});	
+
+    // Scroll to local
+    $.localScroll.hash({
+        target: '#mainWrap',
+        duration:1000
+    });
+
+    $.localScroll({
+        target: '#mainWrap',
+        duration:1000,
+        hash:true,
+    });
+
+    // Scroll elements
+    $('#top').ScrollTo();
+
+
+});
