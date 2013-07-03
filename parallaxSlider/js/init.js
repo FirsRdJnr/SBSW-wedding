@@ -82,56 +82,10 @@
                                     'transform'         : 'rotate('+ angle +'deg)'
                                 });
                             }
-                            //hovering the thumbs animates them up and down
-                            $this.bind('mouseenter',function(){
-                                $(this).stop().animate({top:'-10px'},100);
-                            }).bind('mouseleave',function(){
-                                $(this).stop().animate({top:'0px'},100);
-                            });
                         });
 
                         //make the first thumb be selected
                         highlight($thumbs.eq(0));
-
-                        //slide when clicking the navigation buttons
-                        $pxs_next.bind('click',function(){
-                            ++current;
-                            if(current >= total_elems)
-                                if(o.circular)
-                                    current = 0;
-                            else{
-                                --current;
-                                return false;
-                            }
-                            highlight($thumbs.eq(current));
-                            slide(current,
-                            $pxs_slider,
-                            $pxs_bg3,
-                            $pxs_bg2,
-                            $pxs_bg1,
-                            o.speed,
-                            o.easing,
-                            o.easingBg);
-                        });
-                        $pxs_prev.bind('click',function(){
-                            --current;
-                            if(current < 0)
-                                if(o.circular)
-                                    current = total_elems - 1;
-                            else{
-                                ++current;
-                                return false;
-                            }
-                            highlight($thumbs.eq(current));
-                            slide(current,
-                            $pxs_slider,
-                            $pxs_bg3,
-                            $pxs_bg2,
-                            $pxs_bg1,
-                            o.speed,
-                            o.easing,
-                            o.easingBg);
-                        });
 
                         /*
                         clicking a thumb will slide to the respective image
@@ -154,18 +108,6 @@
                         });
 
 
-
-                        /*
-                        activate the autoplay mode if
-                        that option was specified
-                         */
-                        if(o.auto != 0){
-                            o.circular  = true;
-                            slideshow   = setInterval(function(){
-                                $pxs_next.trigger('click');
-                            },o.auto);
-                        }
-
                         /*
                         when resizing the window,
                         we need to recalculate the widths of the
@@ -175,7 +117,7 @@
                          */
                         $(window).resize(function(){
                             w_w = $(window).width();
-                            setWidths($pxs_slider,$elems,total_elems,$pxs_bg1,$pxs_bg2,$pxs_bg3,one_image_w,$pxs_next,$pxs_prev);
+                            setWidths($pxs_slider,$elems,total_elems,$pxs_bg1,$pxs_bg2,$pxs_bg3,one_image_w);
                             slide(current,
                             $pxs_slider,
                             $pxs_bg3,
@@ -191,8 +133,6 @@
                     alert('here')
                 }).attr('src',$img.attr('src'));
             });
-
-
 
         });
     };
@@ -252,15 +192,6 @@
         $pxs_bg1.width(pxs_slider_w + 'px');
         $pxs_bg2.width(pxs_slider_w + 'px');
         $pxs_bg3.width(pxs_slider_w + 'px');
-
-        /*
-        both the right and left of the
-        navigation next and previous buttons will be:
-        windowWidth/2 - imgWidth/2 + some margin (not to touch the image borders)
-         */
-        var position_nav    = w_w/2 - one_image_w/2 + 3;
-        $pxs_next.css('right', position_nav + 'px');
-        $pxs_prev.css('left', position_nav + 'px');
     }
 
     $.fn.parallaxSlider.defaults = {
