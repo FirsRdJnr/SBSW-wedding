@@ -29,7 +29,7 @@ header {
   top: 0;
   left: 0;
   z-index: 9999;
-  background: url(../img/header-trans.png) 50% 15px no-repeat;
+  background: white url(../img/header.png) 50% 15px no-repeat;
   height: 210px;
   /* nav
 ------------------------------------------------------------ */
@@ -136,37 +136,33 @@ body {
 .fill .carousel .carousel-inner > .item .container {
   position: absolute;
   top: 250px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 @media (min-width: 1200px) {
-  .carousel .container {
+  .container {
     width: 942px;
   }
-  .carousel .container .span12 {
+  .container .span12 {
     width: 940px;
   }
 }
 @media (max-width: 1200px) {
-  .carousel .container {
+  .container {
     width: 942px;
   }
-  .carousel .container .span12 {
+  .container .span12 {
     width: 940px;
   }
 }
 @media (max-width: 979px) {
-  .carousel .container {
+  .container {
     width: 728px;
     margin-bottom: 0;
     width: 100%;
   }
-  .carousel .container .span12 {
+  .container .span12 {
     width: auto;
     padding: 0 20px;
   }
@@ -176,11 +172,7 @@ body {
     padding-left: 0;
     padding-right: 0;
   }
-  body .carousel .container {
+  body .container {
     width: 100%;
-  }
-  body .carousel .container .span12 {
-    width: auto;
-    padding: 0 10px;
   }
 }

@@ -1,72 +1,103 @@
-*{
-    margin:0;
-    padding:0;
+body {
+  width: 12000px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
 }
-body{
-    background:#000;
-    font-family:Georgia;
-    font-size: 34px;
-    font-style: italic;
-    letter-spacing:-1px;
-    width:12000px;
-    position:absolute;
-    top:0px;
-    left:0px;
-    bottom:0px;
+.links {
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
 }
-.section{
-    margin:0px;
-    bottom:0px;
-    width:100%;
-    
-    height:100%;
-    text-shadow:1px 1px 2px #f0f0f0;
+.links .main-nav {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-.section h2{
-    margin:50px 0px 30px 50px;
+.links .main-nav li {
+  padding: 0;
+  display: inline-block;
+  margin: 10px 20px 0 0;
+  list-style: none;
+  text-align: center;
 }
-.section p{
-    margin:20px 0px 0px 50px;
+.links .main-nav li a {
+  display: block;
+  padding: 20px 0;
 }
-.black{
-    color:#fff;
-   
-    background:#000 url(../images/black.jpg) no-repeat top right;
+.section {
+  margin: 0px;
+  bottom: 0px;
+  width: 4000px;
+  float: left;
+  height: 100%;
+  text-shadow: 1px 1px 2px #f0f0f0;
 }
-.white{
-    color:#000;
-    background:#fff url(../images/white.jpg) no-repeat top right;
+.section h2 {
+  margin: 50px 0px 30px 50px;
 }
+.section p {
+  margin: 20px 0px 0px 50px;
+  width: 600px;
+}
+.section.black {
+  color: white;
+  background: black url(../images/black.jpg) no-repeat top right;
+}
+.section.white {
+  color: black;
+  background: white url(../images/white.jpg) no-repeat top right;
+}
+.section .container {
+  position: absolute;
+  top: 100px;
+  width: 1170px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
 
-.section ul{
-    list-style:none;
-    margin:20px 0px 0px 550px;
+@media (min-width: 1200px) {
+  .carousel .container {
+    width: 942px;
+  }
+  .carousel .container .span12 {
+    width: 940px;
+  }
 }
-.black ul li{
-    float:left;
-    padding:5px;
-    margin:5px;
-    color:#aaa;
+@media (max-width: 1200px) {
+  .carousel .container {
+    width: 942px;
+  }
+  .carousel .container .span12 {
+    width: 940px;
+  }
 }
-.black ul li a{
-    display:block;
-    color:#f0f0f0;
+@media (max-width: 979px) {
+  .carousel .container {
+    width: 728px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .carousel .container .span12 {
+    width: auto;
+    padding: 0 20px;
+  }
 }
-.black ul li a:hover{
-    text-decoration:none;
-    color:#fff;
-}
-.white ul li{
-    float:left;
-    padding:5px;
-    margin:5px;
-    color:#aaa;
-}
-.white ul li a{
-    display:block;
-    color:#222;
-}
-.white ul li a:hover{
-    text-decoration:none;
-    color:#000;
+@media (max-width: 767px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  body .carousel .container {
+    width: 100%;
+  }
+  body .carousel .container .span12 {
+    width: auto;
+    padding: 0 10px;
+  }
 }
