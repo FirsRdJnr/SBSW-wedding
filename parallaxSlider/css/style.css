@@ -80,6 +80,7 @@ h5,
 .pxs_container .pxs_slider_wrapper ul.pxs_slider li .container .span12 {
   background: white;
   padding: 10px;
+  min-height: 400px;
 }
 .pxs_container .pxs_slider_wrapper ul.pxs_slider li .container img {
   display: block;
