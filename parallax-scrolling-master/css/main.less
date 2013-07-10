@@ -1,0 +1,130 @@
+html {
+    overflow-y: scroll; /* always force a scrollbar in non-IE */
+    }
+body {
+    overflow-x: hidden;
+    height: 9000px;
+}
+
+#sbsw-wrap {
+    position: relative;
+
+    nav {
+        &.primary {
+            z-index: 5;
+            position: fixed;
+            top: 240px;
+            text-align: center;
+            font-family: 'samantha_upright_proregular';
+            border: 1px solid red;
+
+            li {
+                float: left;
+                height: 20px;
+                list-style: none;
+
+                a {
+                    &:hover,
+                    &.active {
+                        color:red;
+                    }
+                }
+            }
+        }
+        .next-prev {
+            margin: 20px 0 0 0;
+
+            a {
+                &.prev {
+                    display: block;
+                    width: 15px;
+                    height: 11px;
+                    text-indent: -9999px;
+                    margin: 0 auto 5px auto;
+                    background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat;
+
+                    &:hover {
+                        background: transparent url('../img/scroll-arrow-up.png') 0 -11px no-repeat;
+                    }
+                }
+                &.next {
+                    display: block;
+                    width: 15px;
+                    height: 11px;
+                    text-indent: -9999px;
+                    margin: 5px auto 0 auto;
+                    background: transparent url('../img/scroll-arrow-down.png') -1px 0 no-repeat;
+
+                    &:hover {
+                        background: transparent url('../img/scroll-arrow-down.png') -1px -11px no-repeat;
+                    }
+                }
+            }
+        }
+    }
+
+    #content {
+        z-index: 4;
+        position: fixed;
+        padding: 0 10px;
+        line-height: 1.7;
+
+        article {
+            top: 330px;
+            border: 1px solid red;
+
+            header {
+                background: transparent;
+                position: relative;
+            }
+        }
+        #bridegroom, #wedding, #evening, #rsvp, #photos, #wishes {
+            position: absolute;
+        }
+        #bridegroom { left: 0px;}
+        #wedding { left: 2000px;}
+        #evening { left: 4000px;}
+        #rsvp { left: 6000px;}
+        #photos { left: 8000px;}
+        #wishes { left: 10000px;}
+    }
+
+    #parallax-bg3 {
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        margin-left: -470px;
+        height: 100%;
+        width: 12000px;
+        background: url('../../parallaxSlider/images/bg3.png') 0 0 repeat;
+
+        img {
+            position: absolute;
+            top: 0px;
+        }
+        #bg3-1 { left: 1200px;}
+        #bg3-2 { left: 2400px;}
+        #bg3-3 { left: 4000px;}
+        #bg3-4 { left: 5000px;}
+    }
+
+    #parallax-bg2 {
+        z-index: 2;
+        position: fixed;
+        top: 0;    width: 1200px;
+        margin-left: -600px;
+        height: 100%;
+        width: 12000px;
+        background: url('../../parallaxSlider/images/bg2.png') 0 0 repeat;
+    }
+
+    #parallax-bg1 {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        margin-left: -600px;
+        height: 100%;
+        width: 12000px;
+        background: url('../../parallaxSlider/images/bg1.png') 0 0 repeat;
+    }
+}

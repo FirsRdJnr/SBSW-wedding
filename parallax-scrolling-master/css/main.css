@@ -1,154 +1,138 @@
 html {
-    overflow-y: scroll; /* always force a scrollbar in non-IE */
-    }
+  overflow-y: scroll;
+  /* always force a scrollbar in non-IE */
+
+}
 body {
-    background: #e3e5e5;
-    overflow-x: hidden;
-    height: 9000px;
-    line-height: 1.5;
-    color: #000;
-    font-size: 14px;
-    font-family: Arial,sans-serif;
+  overflow-x: hidden;
+  height: 9000px;
 }
-
-
-/* Common shared styles
-*****************************************************************/
-
-hr {
-    margin: 0;
-    border: none;
-    border-top: 1px solid #3b3b3b;
-    border-bottom: 1px solid #3b3b3b;
-    height: 3px;
+#sbsw-wrap {
+  position: relative;
 }
-
-/* Page structure
-*****************************************************************/
-
-#wrapper {
-    position: relative;
+#sbsw-wrap nav.primary {
+  z-index: 5;
+  position: fixed;
+  top: 240px;
+  text-align: center;
+  font-family: 'samantha_upright_proregular';
+  border: 1px solid red;
 }
-
-/* Nav
-*****************************************************************/
-
-nav#primary {
-    z-index: 5;
-    position: fixed;
-    top: 240px;
-    width: 100%;
-    text-align: center;
-    font-family: 'samantha_upright_proregular';
+#sbsw-wrap nav.primary li {
+  float: left;
+  height: 20px;
+  list-style: none;
 }
-nav#primary li {
-    float: left;
-    height: 20px;
-    list-style: none;;
+#sbsw-wrap nav.primary li a:hover,
+#sbsw-wrap nav.primary li a.active {
+  color: red;
 }
-nav#primary a {
-    /*display: block;
-    width: 20px;
-    height: 20px;
-    text-indent: -9999px;
-    background: transparent url('../img/nav-dot.png') 4px 4px no-repeat;*/
+#sbsw-wrap nav .next-prev {
+  margin: 20px 0 0 0;
 }
-nav#primary a:hover, nav#primary a.active {
-    color:red;
+#sbsw-wrap nav .next-prev a.prev {
+  display: block;
+  width: 15px;
+  height: 11px;
+  text-indent: -9999px;
+  margin: 0 auto 5px auto;
+  background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat;
 }
-
-nav.next-prev {
-    margin: 20px 0 0 0;
-    }
-    a.prev,
-    a.next {
-        display: block;
-        width: 15px;
-        height: 11px;
-        text-indent: -9999px;
-        }
-    a.prev {
-        margin: 0 auto 5px auto;
-        background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat;
-        }
-        a.prev:hover {
-            background: transparent url('../img/scroll-arrow-up.png') 0 -11px no-repeat;
-            }
-    a.next {
-        margin: 5px auto 0 auto;
-        background: transparent url('../img/scroll-arrow-down.png') -1px 0 no-repeat;
-        }
-        a.next:hover {
-            background: transparent url('../img/scroll-arrow-down.png') -1px -11px no-repeat;
-            }
-
-/* Parallax
-*****************************************************************/
-
-/* content */
-#content {
-    z-index: 4;
-    position: fixed;
-    padding: 0 10px;
-    line-height: 1.7;
+#sbsw-wrap nav .next-prev a.prev:hover {
+  background: transparent url('../img/scroll-arrow-up.png') 0 -11px no-repeat;
 }
-#content article {
-    top: 330px;
-    border: 1px solid red;
+#sbsw-wrap nav .next-prev a.next {
+  display: block;
+  width: 15px;
+  height: 11px;
+  text-indent: -9999px;
+  margin: 5px auto 0 auto;
+  background: transparent url('../img/scroll-arrow-down.png') -1px 0 no-repeat;
 }
-#bridegroom, #wedding, #evening, #rsvp, #photos, #wishes {
-    position: absolute;
+#sbsw-wrap nav .next-prev a.next:hover {
+  background: transparent url('../img/scroll-arrow-down.png') -1px -11px no-repeat;
 }
-#bridegroom { left: 0px;}
-#wedding { left: 15%;}
-#evening { left: 20%;}
-#rsvp { left: 30%;}
-#photos { left: 40%;}
-#wishes { left: 50%;}
-
-/* foreground (ballons/landscape) */
-#parallax-bg3 {
-    z-index: 3;
-    position: fixed;
-    top: 0;
-    margin-left: -470px;
-    height: 100%;
-    width: 12000px;
-    background: url('../../parallaxSlider/images/bg3.png') 0 0 repeat;
+#sbsw-wrap #content {
+  z-index: 4;
+  position: fixed;
+  padding: 0 10px;
+  line-height: 1.7;
 }
-#parallax-bg3 img {
-    position: absolute;
-        top: 0px;
+#sbsw-wrap #content article {
+  top: 330px;
+  border: 1px solid red;
 }
-    /* balloon */
-    #bg3-1 { left: 1200px;}
-    #bg3-2 { left: 2400px;}
-    #bg3-3 { left: 4000px;}
-    #bg3-4 { left: 5000px;}
-
-/* midground (clouds) */
-#parallax-bg2 {
-    z-index: 2;
-    position: fixed;
-    top: 0;    width: 1200px;
-    margin-left: -600px; /* move left by half element's width */
-    height: 100%;
-    width: 12000px;
-    background: url('../../parallaxSlider/images/bg2.png') 0 0 repeat;
+#sbsw-wrap #content article header {
+  background: transparent;
+  position: relative;
 }
-
-/* background (clouds) */
-#parallax-bg1 {
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    margin-left: -600px;
-    height: 100%;
-    width: 12000px;
-    background: url('../../parallaxSlider/images/bg1.png') 0 0 repeat;
+#sbsw-wrap #content #bridegroom,
+#sbsw-wrap #content #wedding,
+#sbsw-wrap #content #evening,
+#sbsw-wrap #content #rsvp,
+#sbsw-wrap #content #photos,
+#sbsw-wrap #content #wishes {
+  position: absolute;
 }
-
-article header {
-    background: transparent;
-    position: relative;
+#sbsw-wrap #content #bridegroom {
+  left: 0px;
+}
+#sbsw-wrap #content #wedding {
+  left: 2000px;
+}
+#sbsw-wrap #content #evening {
+  left: 4000px;
+}
+#sbsw-wrap #content #rsvp {
+  left: 6000px;
+}
+#sbsw-wrap #content #photos {
+  left: 8000px;
+}
+#sbsw-wrap #content #wishes {
+  left: 10000px;
+}
+#sbsw-wrap #parallax-bg3 {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  margin-left: -470px;
+  height: 100%;
+  width: 12000px;
+  background: url('../../parallaxSlider/images/bg3.png') 0 0 repeat;
+}
+#sbsw-wrap #parallax-bg3 img {
+  position: absolute;
+  top: 0px;
+}
+#sbsw-wrap #parallax-bg3 #bg3-1 {
+  left: 1200px;
+}
+#sbsw-wrap #parallax-bg3 #bg3-2 {
+  left: 2400px;
+}
+#sbsw-wrap #parallax-bg3 #bg3-3 {
+  left: 4000px;
+}
+#sbsw-wrap #parallax-bg3 #bg3-4 {
+  left: 5000px;
+}
+#sbsw-wrap #parallax-bg2 {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 1200px;
+  margin-left: -600px;
+  height: 100%;
+  width: 12000px;
+  background: url('../../parallaxSlider/images/bg2.png') 0 0 repeat;
+}
+#sbsw-wrap #parallax-bg1 {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  margin-left: -600px;
+  height: 100%;
+  width: 12000px;
+  background: url('../../parallaxSlider/images/bg1.png') 0 0 repeat;
 }
