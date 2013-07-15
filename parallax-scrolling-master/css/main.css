@@ -61,6 +61,7 @@ body {
 #sbsw-wrap #content article {
   top: 330px;
   border: 1px solid red;
+  width: 800px;
 }
 #sbsw-wrap #content article header {
   background: transparent;
@@ -75,22 +76,22 @@ body {
   position: absolute;
 }
 #sbsw-wrap #content #bridegroom {
-  left: 0px;
+  left: 50px;
 }
 #sbsw-wrap #content #wedding {
-  left: 2000px;
+  left: 1000px;
 }
 #sbsw-wrap #content #evening {
-  left: 4000px;
+  left: 2000px;
 }
 #sbsw-wrap #content #rsvp {
-  left: 6000px;
+  left: 3000px;
 }
 #sbsw-wrap #content #photos {
-  left: 8000px;
+  left: 4000px;
 }
 #sbsw-wrap #content #wishes {
-  left: 10000px;
+  left: 5000px;
 }
 #sbsw-wrap #parallax-bg3 {
   z-index: 3;

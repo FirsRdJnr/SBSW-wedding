@@ -73,11 +73,11 @@ function parallaxScroll(){
 function redrawDotNav(){
     var section1Top =  0;
     // The top of each section is offset by half the distance to the previous section.
-    var section2Top =  $('#wedding').offset().left + 1000;
-    var section3Top =  $('#evening').offset().left +3000;
-    var section4Top =  $('#rsvp').offset().left +4000;
-    var section5Top =  $('#photos').offset().left + 1000;
-    var section6Top =  $('#wishes').offset().left +3000;
+    var section2Top =  $('#wedding').offset().left + 1500;
+    var section3Top =  $('#evening').offset().left +1500;
+    var section4Top =  $('#rsvp').offset().left +1500;
+    var section5Top =  $('#photos').offset().left + 1500;
+    var section6Top =  $('#wishes').offset().left +1500;
 
     $('nav.primary a').removeClass('active');
     if($(document).scrollTop() >= section1Top && $(document).scrollTop() < section2Top){

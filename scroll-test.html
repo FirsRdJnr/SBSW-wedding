@@ -1,48 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+    <meta charset="utf-8">
+    <title>Stephen & Shirleys Big Day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/extra.css" rel="stylesheet">
+    <link href="fonts/Samantha-Script-Family/stylesheet.css" rel="stylesheet">
+
+    <!-- IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" media="all" href="parallax-scrolling-master/css/main.css" />
+
+    <script src="js/modernizr.custom.37797.js"></script>
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
+    <script src="js/parallax.js"></script>
 <style>
 body { height: 6000px; font-family: Helvetica, Arial;}
-#top-menu { position: fixed; z-index: 1; background: white; left: 0; right: 0; top: 0; list-style: none;}
+#top-menu { position: fixed; z-index: 10; left: 0; right: 0; top: 0; list-style: none;}
 #top-menu li { float: left;}
 #top-menu a { display: block; padding: 5px 25px 7px 25px; -webkit-transition: 1s all ease; -moz-transition: 1s all ease; transition: 1s all ease; border-top: 3px solid white; color: #666; text-decoration: none;}
 #top-menu a:hover { color: #000;}
 #top-menu li.active a { border-top: 3px solid #333; color: #333; font-weight: bold;}
-#foo { position: absolute; top: 400px;}
-#bar { position: absolute; top: 800px;}
-#baz { position: absolute; top: 1200px;}
+#foo { position: absolute; top: 400px; background: white; z-index: 11;}
+#bar { position: absolute; top: 800px; background: white; z-index: 11;}
+#baz { position: absolute; top: 1200px; background: white; z-index: 11;}
 </style>
 </head>
 
 <body>
+<div id="sbsw-wrap">
+    <div id="parallax-bg3">
+        <img id="bg3-1" src="parallax-scrolling-master/img/balloon.png" width="529" height="757" alt="Montgolfier hot air balloon"/>
+        <img id="bg3-2" src="parallax-scrolling-master/img/balloon2.png" width="603" height="583" alt="Frameless parachute"/>
+        <img id="bg3-3" src="parallax-scrolling-master/img/balloon3.png" width="446" height="713" alt="Blanchard's air balloon"/>
+        <img id="bg3-4" src="parallax-scrolling-master/img/ground.png" width="1104" height="684" alt="Landscape with trees and cows"/>
+    </div>
+    <div id="parallax-bg2"></div>
+    <div id="parallax-bg1"></div>
+        <ul id="top-menu">
+          <li class="active">
+            <a href="#">Top</a>
+          </li>
+          <li>
+            <a href="#foo">Foo</a>
+          </li>
+          <li>
+            <a href="#bar">Bar</a>
+          </li>
+          <li>
+            <a href="#baz">Baz</a>
+          </li>
+        </ul>
 
-    <ul id="top-menu">
-      <li class="active">
-        <a href="#">Top</a>
-      </li>
-      <li>
-        <a href="#foo">Foo</a>
-      </li>
-      <li>
-        <a href="#bar">Bar</a>
-      </li>
-      <li>
-        <a href="#baz">Baz</a>
-      </li>
-    </ul>
-
-<a id="foo">Foo</a>
+    <a id="foo">Foo</a>
 
 
-<a id="bar">Bar</a>
+    <a id="bar">Bar</a>
 
 
-<a id="baz">Baz</a>
+    <a id="baz">Baz</a>
 
+</div>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script>
 // Cache selectors
 var lastId,
